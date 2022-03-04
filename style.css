@@ -1,0 +1,79 @@
+@import url("https://elite-ui.netlify.app/style.css");
+
+body {
+    background-color: #BBE6F5;
+}
+.btn{
+    padding: 1rem;
+}
+#rows {
+    width: 3rem;
+}
+
+input,
+select {
+    padding: 0.1rem;
+}
+
+#answer {
+    width: 4rem;
+}
+
+.main-container {
+    display: flex;
+    width: 50%;
+    border: 2px solid var(--primary);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 70px;
+    padding: 1rem;
+}
+
+.ip-container>* {
+    padding: 1rem;
+}
+
+#num-display {
+    font-size: 10rem;
+}
+
+.footer {
+    position: fixed;
+}
+
+.nav-colored {
+    background-color: #115E78;
+    color: #FBFE35;
+    padding: 2rem;
+}
+
+.op-btn-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.disp-none {
+    display: none;
+}
+
+.output {
+    display: none;
+}
+
+@media screen and (max-width: 740px) {
+    .main-container {
+        width: 80%;
+        margin-bottom: 70px;
+    }
+
+    #num-display {
+        font-size: 6rem;
+        padding: 1rem;
+    }
+    .footer{
+        position: unset;
+    }
+}

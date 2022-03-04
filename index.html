@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Practise</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav class="nav-bar nav-colored top box-shadow">
+
+        <a href="#" class="link-plain">Flash Practice</a>
+        <div class="nav-links">
+            <a href="https://www.vedantu.com/maths/abacus" class="link-plain">What is Abacus?</a>
+        </div>
+    </nav>
+    <main class="main-container">
+        <form class="ip-container">
+            <div class="digits-container">
+                <label for="digits">Choose the number of digits:</label>
+                <select name="digits" id="digits">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="row-container">
+                <label for="rows">Enter the number of rows:</label>
+                <input type="number" id="rows">
+            </div>
+            <div class="speed-container">
+                <label for="speed">Choose the speed:</label>
+                <select name="speed" id="speed">
+                    <option value="slow">Slow</option>
+                    <option value="medium">Medium</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+        </form>
+        <button class="ip-container submit-btn btn primary-btn btn-round">Submit</button>
+        <h1 id="num-display"></h1>
+        <section class="output-container">
+            <div class="user-answer disp-none">
+                <label for="answer">Enter your answer</label>
+                <input type="number" id="answer">
+            </div>
+            <div class="op-btn-container">
+                <button class=" btn primary-btn btn-round submit-answer disp-none">Submit Answer</button>
+                <button class=" btn secondary-btn  btn-round retry disp-none">Retry</button>
+            </div>
+            <h3 class="output disp-none"></h3>
+        </section>
+    </main>
+    <footer class="footer nav-bar bottom-left nav-colored">
+        <p class="footer-text">Made by Laxmikanth Konthum for Bumper</p>
+        <div class="nav-links">
+            <a class="link-plain hover-class" href="#"><i class="fab fa-github"></i></a>
+            <a class="link-plain hover-class" href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
