@@ -75,11 +75,11 @@ function submitHandler() {
 function answerhandler() {
    if (sum === Number(answer.value)) {
       numDisplay.innerHTML = '😍';
-      op.style.color = "green"
+      op.style.color = "#ADFF2F"
       op.innerText = "Yayy! Correct Answer";
    } else {
       numDisplay.innerHTML = '😟';
-      op.style.color = "red"
-      op.innerText = `Oh No! The correct answer ${sum}`;
+      op.style.color = "#DC143C"
+      op.innerText = `Oh No! The Correct Answer ${sum}`;
    }
 };
