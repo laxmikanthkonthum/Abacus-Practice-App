@@ -17,18 +17,14 @@ let sum = 0;
 
 function submitHandler() {
    rows = Number(rows.value);
-   digits = Number(digits.value);
-   console.log(rows, typeof (rows), isNaN(rows))
+   digits = Number(digits.value); 
    if (rows < 1 || isNaN(rows)) {
       op.style.display = "block";
       op.innerText = "Please hit Retry and enter rows greater than 0";
-      console.log("hi");
       submit.style.display = "none";
       retry.style.display = "block"
       retry.style.margin = "auto"
    } else {
-      console.log(rows, digits);
-      console.log('hello');
       ip.style.display = "none";
       submit.style.display = "none";
 
@@ -36,7 +32,7 @@ function submitHandler() {
 
       let min = 0;
       let max = 0;
-      let duration = 0;
+      let duration = 500;
 
       if (digits === 1) {
          min = 1;
@@ -48,11 +44,18 @@ function submitHandler() {
          min = 100;
          max = 1000;
       }
-      if (speed === "slow") duration = 700;
-      else if (speed === "medium") duration = 400;
-      else if (speed === "fast") duration = 200;
+      
+      if (speed === "slow") {
+         duration = 1000;
+      }
+      else if (speed === "medium") 
+      {
+         duration = 800;
+      }
+      else if (speed === "fast") {
+         duration = 600
+      };
       const numGenerator = (rows) => {
-         counter = rows * duration;
          generator = setInterval(() => {
             num = Math.round(Math.random() * (max - min) + min);
             numDisplay.innerText = num;
@@ -65,7 +68,7 @@ function submitHandler() {
                retry.style.display = "block";
                op.style.display = "block";
             }
-         }, counter);
+         }, duration);
       };
 
       numGenerator(rows);
@@ -74,11 +77,11 @@ function submitHandler() {
 
 function answerhandler() {
    if (sum === Number(answer.value)) {
-      numDisplay.innerHTML = '😍';
+      numDisplay.innerText = '😍';
       op.style.color = "#ADFF2F"
       op.innerText = "Yayy! Correct Answer";
    } else {
-      numDisplay.innerHTML = '😟';
+      numDisplay.innerText = '😟';
       op.style.color = "#DC143C"
       op.innerText = `Oh No! The Correct Answer ${sum}`;
    }
